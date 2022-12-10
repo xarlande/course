@@ -4,7 +4,6 @@ let randNumber = Math.trunc(Math.random() * 20) + 1, score = document.querySelec
     hightScore = document.querySelector('.highscore');
 console.log(randNumber)
 
-
 check.addEventListener('click', ()=>{
     const valueInput =Number(numberInput.value);
     if (!valueInput) {
