@@ -22,7 +22,7 @@ check.addEventListener('click', ()=>{
     else if (valueInput === randNumber) {
         numberBorder.textContent = 'Виграш'
         randBorder.textContent = valueInput
-        if (score.textContent>hightScore.textContent){
+        if (Number(score.textContent)>Number(hightScore.textContent)){
             hightScore.textContent = score.textContent
         }
     }
