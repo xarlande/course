@@ -40,4 +40,5 @@ check.addEventListener('click', ()=>{
         score.textContent = 20
         randBorder.textContent = '???'
         numberBorder.textContent = 'Начни вгадувати'
+        numberInput.value = ''
     })
