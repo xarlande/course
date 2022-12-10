@@ -1,5 +1,5 @@
 const check = document.querySelector('.check'), numberInput = document.querySelector('.number-input'),
-    numberBorder = document.querySelector('.guess-message');
+    numberBorder = document.querySelector('.guess-message'), againGame = document.querySelector('.again'), randBorder = document.querySelector('.question'), dontScore = 1;
 let randNumber = Math.trunc(Math.random() * 20) + 1, score = document.querySelector('.score'),
     hightScore = document.querySelector('.highscore');
 console.log(randNumber)
@@ -10,9 +10,8 @@ check.addEventListener('click', ()=>{
     if (!valueInput) {
         numberBorder.textContent = 'Введіть число'
     }
-    else if (score.textContent == 1){
-        score.textContent = 20
-        randNumber = Math.trunc(Math.random()*20) + 1
+    else if (score.textContent == dontScore){
+        numberBorder.textContent = 'У вас закінчились спроби'
         console.log(randNumber)
     }
     else if (valueInput > 20){
@@ -23,12 +22,10 @@ check.addEventListener('click', ()=>{
     }
     else if (valueInput === randNumber) {
         numberBorder.textContent = 'Виграш'
+        randBorder.textContent = valueInput
         if (score.textContent>hightScore.textContent){
             hightScore.textContent = score.textContent
         }
-        score.textContent = 20
-        randNumber = Math.trunc(Math.random()*20) + 1
-        console.log(randNumber)
     }
     else if (valueInput > randNumber) {
         numberBorder.textContent = 'Введіть менше число'
@@ -38,6 +35,10 @@ check.addEventListener('click', ()=>{
         numberBorder.textContent = 'Введіть більше число'
         score.textContent--
     }
-
-
 })
+    againGame.addEventListener('click', () => {
+        randNumber = Math.trunc(Math.random()*20) + 1
+        score.textContent = 20
+        randBorder.textContent = '???'
+        numberBorder.textContent = 'Начни вгадувати'
+    })
