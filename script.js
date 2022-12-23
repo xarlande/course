@@ -32,9 +32,9 @@ btnRoll.addEventListener('click', () => {
     } else {
         currentScore = 0
         currentPlayer.textContent = currentScore
-        activePlayer == 0 ? activePlayer++ : activePlayer = 0
+        activePlayer === 0 ? activePlayer++ : activePlayer = 0
     }
-    if (activePlayer == 0) {
+    if (activePlayer === 0) {
         player0Element.classList.add('player--active')
         player1Element.classList.remove('player--active')
     } else {
