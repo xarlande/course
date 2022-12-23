@@ -37,8 +37,7 @@ btnRoll.addEventListener('click', () => {
     if (activePlayer == 0) {
         player0Element.classList.add('player--active')
         player1Element.classList.remove('player--active')
-    }
-    else  {
+    } else {
         player0Element.classList.remove('player--active')
         player1Element.classList.add('player--active')
     }
