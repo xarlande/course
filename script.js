@@ -18,7 +18,7 @@ check.addEventListener('click', ()=>{
     if (!valueInput) {
         numberBorder('Введіть число')
     }
-    else if (score.textContent == dontScore){
+    else if (score.textContent === dontScore){
         numberBorder('У вас закінчились спроби')
         console.log(randNumber)
     }
