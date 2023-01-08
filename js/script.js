@@ -21,7 +21,7 @@ let activePlayer = 0
 btnRoll.addEventListener('click', () => {
     const diceNumber = Math.trunc(Math.random() * 6) + 1
     diceElement.classList.remove('hidden')
-    diceElement.src = `dice${diceNumber}.png`
+    diceElement.src = `img/dice${diceNumber}.png`
     const currentPlayer = document.getElementById(`current--${activePlayer}`)
 
     if (diceNumber !== 1) {
@@ -41,7 +41,7 @@ btnRoll.addEventListener('click', () => {
     }
 })
 
-btnNew.addEventListener('click', () =>{
+btnNew.addEventListener('click', () => {
     const currentPlayer = document.getElementById(`current--${activePlayer}`)
     diceElement.classList.add('hidden')
     diceElement.src = ''
@@ -54,7 +54,6 @@ btnNew.addEventListener('click', () =>{
     totalScores[1] = 0
     score0Element.textContent = '0'
     score1Element.textContent = '0'
-    console.log(totalScores)
 })
 
 btnHold.addEventListener('click', () => {
